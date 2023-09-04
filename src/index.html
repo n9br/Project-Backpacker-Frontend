@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>European Cities Frontend</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/css/uikit.min.css" />
+
+        <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+        <style>
+            .ec-center {
+                text-align: center;
+            }
+            .ec-container-center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>    
+    </head>
+
+    <body>
+        <header>        
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left uk-container">
+                    <ul class="uk-navbar-nav">
+                        <li uk-toggle="target: #ec-post-city-modal"  class="uk-active"><a href="#">Post</a></li>
+                    </ul>           
+                    <ul class="uk-navbar-nav">
+                        <li uk-toggle="target: #ec-login-modal"  class="uk-active"><a href="#">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="uk-container">
+            <h1 class="ec-center">European Cities</h1>
+            <div class="uk-container ec-container-center" id="ec-container">
+            </div>
+        </div>
+
+            <div uk-modal id="ec-post-city-modal">
+                <div class="uk-modal-dialog uk-margin-auto-vertical">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-modal-header">
+                        <h2 class="uk-modal-title">Create New City</h2>
+                    </div>
+
+                    <div class="uk-modal-body">
+                        <!-- <div class="uk-margin">
+                            <div class="uk-form-label">User</div>
+                            <input class="uk-input" id="ec-user" name="user" placeholder="User"/>
+                        </div> -->
+
+                        <div class="uk-margin">
+                            <div class="uk-form-label">City</div>
+                            <textarea 
+                                    class="uk-textarea" 
+                                    rows="5" 
+                                    placeholder="your city here ..." 
+                                    id="ec-citytext"
+                                    name="text"
+                                    aria-label="Textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="uk-modal-footer">
+                        <div style="display: flex; justify-content: space-around;">
+                            <button type="reset" class="uk-button">Reset</button>
+                            <button class="uk-button uk-button-primary" onclick="saveCity()">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div uk-modal id="ec-login-modal">
+                <div class="uk-modal-dialog uk-margin-auto-vertical">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-modal-header">
+                        <h2 class="uk-modal-title">Login to European Cities</h2>
+                    </div>
+
+                    <div class="uk-modal-body">
+                        <div class="uk-margin">
+                            <div class="uk-form-label">Username</div>
+                            <input class="uk-input" id="login-username" name="Username" placeholder="Username" />
+                            <div class="uk-form-label">Password</div>
+                            <input class="uk-input" type="password" id="login-password" name="Password" placeholder="Password" />
+                        </div>
+                    </div>
+                    <div class="uk-modal-footer">
+                        <div style="display: flex; justify-content: space-around;">
+                            <button type="reset" class="uk-button">Reset</button>
+                            <button class="uk-button uk-button-primary" onclick="submitUserlogin()">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </body>
+
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit-icons.min.js"></script>
+
+<!-- <script src='main.js'></script> -->
+<script src="europ-cities.js"></script>
+</html>
